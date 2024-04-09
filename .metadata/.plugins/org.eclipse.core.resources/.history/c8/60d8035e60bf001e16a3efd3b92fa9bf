@@ -1,0 +1,63 @@
+package day18;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class WordManager implements Program{
+	
+	private String word;
+	private String mean;
+	private HashMap<String, String> map = new HashMap<>();
+	
+	@Override
+	public void menu1(Scanner scan) {
+			
+		System.out.printf("--단어등록--%n단어 입력 > > %n");
+		word = scan.next();
+		System.out.printf("뜻 입력 > > %n");
+		mean = scan.next();
+
+		Iterator<String> it = map.keySet().iterator();
+		while(it.hasNext()) {
+			word = it.next();
+			mean = map.get(word);
+		}
+	}
+
+	@Override
+	public void menu2(Scanner scan) {
+		
+	}
+
+	@Override
+	public void menu3(Scanner scan) {
+		
+	}
+
+	@Override
+	public void menu4() {
+		
+		map.put("apple", "사과");
+		map.put("banana", "바나나");
+		map.put("cat", "고양이");
+		map.put("dog", "강아지");
+		map.put("tiger", "호랑이");
+		
+		System.out.printf("%n--단어출력--%n");
+		
+		for(String s : map.keySet()) {
+			System.out.println(s+" : "+map.get(s));
+		}
+		System.out.println(word+" : "+mean);
+			
+	}
+
+	@Override
+	public void menu5(Scanner scan) {
+		
+	}
+	
+
+
+}

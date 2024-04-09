@@ -1,0 +1,6 @@
+banana:바나나
+1:1
+kiwi:키위
+cat:고양이
+tiger:호랑이
+dog:강아지
